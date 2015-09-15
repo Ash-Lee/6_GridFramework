@@ -1,0 +1,175 @@
+/* 6_GridFramework - CSS */
+
+@import "reset";        /* Based on Eric Meyer's Reset Sheet */
+@import "grid-framework";         /* Grid Based Framework */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+
+
+/*========================================*/
+  /* .fluid */
+/*========================================*/
+.fluid {
+    @include container-full();      /* Full width fluid container */
+}
+
+.fluid-r1 {
+    @include row();
+    @include boundaries();      /* Upper and lower limits of fluid row */
+
+    .fluid-r1-c1 {
+        @include column(12);        /* Width specified in number of columns (max default = 12) */
+    }
+}
+
+
+
+/*========================================*/
+  /* .fixed */
+/*========================================*/
+.fixed {
+    @include container-fixed();     /* Fixed container with fluid margins and width adjusting break points */
+}
+
+.fixed-r1 {
+    @include row();     /* Standard row - allows for external + internal column margins */
+
+    .fixed-r1-c1,
+    .fixed-r1-c2,
+    .fixed-r1-c3 {
+        @include column(4);     /* Columns with margins */
+    }
+}
+
+.fixed-r2 {
+    @include row-ext();     /* Indented row - uses external margins */
+
+    .fixed-r2-c1,
+    .fixed-r2-c2,
+    .fixed-r2-c3 {
+        @include column-full(4);    /* Columns without margins */
+    }
+
+}
+
+.fixed-r3 {
+    @include row-full();    /* Full row - with no margins */
+
+    .fixed-r3-c1,
+    .fixed-r3-c2,
+    .fixed-r3-c3 {
+        @include column-full(4);
+    }
+}
+
+
+
+/*========================================*/
+  /* .examples */
+/*========================================*/
+.examples {
+    @include container-fixed;
+}
+
+.examples-r1,
+.examples-r2,
+.examples-r3,
+.examples-r4,
+.examples-r5,
+.examples-r6 {
+    @include row();
+}
+
+/* Columns - Row 1 */
+.examples-r1-c1 {
+    @include column(1);
+}
+
+.examples-r1-c2 {
+    @include column(11);
+}
+
+/* Columns - Row 2 */
+.examples-r2-c1 {
+    @include column(2);
+}
+
+.examples-r2-c2 {
+    @include column(10);
+}
+
+/* Columns - Row 3 */
+.examples-r3-c1 {
+    @include column(3);
+}
+
+.examples-r3-c2 {
+    @include column(9);
+}
+
+/* Columns - Row 4 */
+.examples-r4-c1,
+.examples-r4-c2,
+.examples-r4-c3,
+.examples-r4-c4 {
+    @include column(3);
+}
+
+/* Columns - Row 5 */
+.examples-r5-c1,
+.examples-r5-c2,
+.examples-r5-c3,
+.examples-r5-c4,
+.examples-r5-c5,
+.examples-r5-c6 {
+    @include column(2);
+}
+
+/* Columns - Row 6 */
+.examples-r6-c1,
+.examples-r6-c2,
+.examples-r6-c3,
+.examples-r6-c4,
+.examples-r6-c5,
+.examples-r6-c6,
+.examples-r6-c7,
+.examples-r6-c8,
+.examples-r6-c9,
+.examples-r6-c10,
+.examples-r6-c11,
+.examples-r6-c12 {
+    @include column(1);
+}
+
+
+
+/*========================================*/
+  /* .sticky-footer */
+/*========================================*/
+/* Use appropriate class names direct from the grid system */
+
+.sticky-footer {
+    @include container-full();
+}
+
+.sticky-footer-r1 {
+    @include row();
+    @include boundaries();
+    
+    .sticky-footer-r1-c1,
+    .sticky-footer-r1-c2 {
+        @include column-full(6);
+    }
+}
+
+
+
+/*----------------------------------------*/
+  /* Page Styling */
+/*----------------------------------------*/
+@import "style";        /* Margin, border and background styling */
