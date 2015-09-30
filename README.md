@@ -7,8 +7,8 @@ Take everything you've learned and use it to build your own grid based framework
 <ul>
     <li>Created a 12 column grid based framework that can be used in the creation of website layouts</li>
     <li>Created a system that allows for containers, rows, columns, gutters and sticky footers</li>
-    <li>Expanded knowledge of responsive design in order to create a framework that allows for full width fluid elements and breakpoint moderated fixed width designs.
-    <li>Implemented knowledge of pre-processors using the CSS extension language SASS with SCSS syntax</li> 
+    <li>Expanded knowledge of responsive design in order to create a framework that allows for full width fluid elements and breakpoint moderated fixed width designs
+    <li>Implemented knowledge of preprocessors using the CSS extension language Sass with SCSS syntax</li> 
     <li>Framework allows for the customisation of standard grid settings via user defined variables</li>
 </ul>
 
